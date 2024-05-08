@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Orbitron", sans-serif;
+}
+
+body {
+    background-color: #151320;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 110vh;
+    flex-direction: column;
+}
+
+.btn-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.btn-low {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: none;
+    margin-top: 50px;
+}
+
+button {
+    margin-left: 25px;
+    width: 120px;
+    height: 45px;
+    background-color: #151320;
+    border: none;
+    color: #ffffff;
+    box-shadow: 1px 1px 9px #ffffff;
+}
+
+.low {
+    margin: 0;
+}
+
+#pause,
+#continue {
+    display: none;
+}
+
+.box {
+    position: relative;
+    border-radius: 50%;
+    width: 400px;
+    height: 400px;
+    background-color: #151320;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
+}
+
+.box::after,
+.box::before {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    width: calc(100% + 30px);
+    height: calc(100% + 30px);
+    background: linear-gradient(90deg, #f1b7ea, #a486b0, #694786, #5d479a, #3c2d57, #1a1347, #151320, #f1b7ea, #a486b0, #694786, #5d479a, #3c2d57, #1a1347);
+    background-size: 800px;
+    animation: caixaAnimada 7s linear alternate infinite;
+}
+
+@keyframes caixaAnimada {
+    0% {
+        background-position: 0;
+    }
+
+    100% {
+        background-position: 300%;
+    }
+}
+
+.box::after {
+    filter: blur(50px);
+}
+
+@media screen and (max-width: 850px) {
+
+
+    main {
+        width: 80vw;
+    }
+
+    .content {
+        width: 100%;
+    }
+
+    button {
+        background-color: transparent;
+        border: none;
+        color: #ffffff;
+
+    }
+
+    .box {
+        width: 300px;
+        height: 300px;
+    }
+
+}
