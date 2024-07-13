@@ -15,19 +15,25 @@
 
 <body>
     <main>
-        <div class="content">
-            <div class="btn-top">
-                <button id="focus">25MIN</button><button id="break">5MIN</button><button id="rest">15MIN</button>
-            </div>
-            <div class="box">
-                <span id="minute">00</span>:<span id="second">00</span>
-            </div>
-            <div class="btn-low">
-                
-                <button class="low" id="pause">PAUSAR</button>
-                <button class="low" id="continue">CONTINUAR</button>
-            </div>
+
+        <div id="btns-top">
+            <button id="focus">25MIN</button>
+            <button id="break">5MIN</button>
+            <button id="rest">15MIN</button>
         </div>
+
+        <div class="clock">
+            <span id="minute">00</span>:<span id="second">00</span>
+        </div>
+
+        <div id="btns-low">
+            <button id="start">INICIAR</button>
+            <button id="pause">PAUSAR</button>
+            <button id="continue">CONTINUAR</button>
+            <button id="reset">REINICIAR</button>
+
+        </div>
+
     </main>
 </body>
 <script src="./scripts.js"></script>

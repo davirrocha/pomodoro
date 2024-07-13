@@ -6,50 +6,46 @@
 }
 
 body {
-    background-color: #151320;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 110vh;
     flex-direction: column;
+    background-color: #151320;
 }
 
-.btn-top {
+main {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    margin-bottom: 50px;
-}
-
-.btn-low {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: none;
-    margin-top: 50px;
+    align-self: center;
+    gap: 40px;
 }
 
 button {
-    margin-left: 25px;
     width: 120px;
     height: 45px;
-    background-color: #151320;
+    background-color: transparent;
     border: none;
     color: #ffffff;
-    box-shadow: 1px 1px 9px #ffffff;
+    cursor: pointer;
 }
 
-.low {
-    margin: 0;
+#btns-top,
+#btns-low {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
 }
 
 #pause,
-#continue {
+#continue,
+#reset {
     display: none;
 }
 
-.box {
+.clock {
     position: relative;
     border-radius: 50%;
     width: 400px;
@@ -62,8 +58,8 @@ button {
     font-size: 80px;
 }
 
-.box::after,
-.box::before {
+.clock::after,
+.clock::before {
     content: '';
     position: absolute;
     border-radius: 50%;
@@ -85,7 +81,7 @@ button {
     }
 }
 
-.box::after {
+.clock::after {
     filter: blur(50px);
 }
 
@@ -94,20 +90,10 @@ button {
 
     main {
         width: 80vw;
+        align-items: center;
     }
 
-    .content {
-        width: 100%;
-    }
-
-    button {
-        background-color: transparent;
-        border: none;
-        color: #ffffff;
-
-    }
-
-    .box {
+    .clock {
         width: 300px;
         height: 300px;
     }
